@@ -1,5 +1,5 @@
 # Ishihara
-R code to print Ishihara patterns for behavioral color vision experiments
+R code to print Ishihara patterns for behavioral color vision experiments. 
 This code was developed as a target for visual behavioral experiments based on the work of Karen Cheney, 
 Justin Marshall, and John Endler.  It produces Ishihara patterns where one spot differs from many background 
 spots.  These patterns are then used to test whether fish or other organisms can recognize the unique spot (the target) 
