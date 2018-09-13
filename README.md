@@ -14,8 +14,8 @@ The pattern is made up of circles or spots.  The target spot is unique from the 
 * number_points   the maximum number of spots to generate and try to fill in the pattern.  The larger this is the more full the spot pattern will be. Typically this is large, e.g 10,000
 * first_points    the number of spots to plot first that are selected from the larger radii (set by min_size) compared to the complete set.  A number smaller than number_points, e.g. 500
 
-* radius          the set of possible circle radii , e.g c(0.2, 0.3, 0.4, 0.5, 0.6)
-* min_size        a number from 1 to # radii which sets the minimum radius for the first_points plotted circles.  So for example if min_size is 3, the first_points plotted will all have a radius greater or equal to the third value of radius i.e. 0.4 for the list above
+* radius          the set of possible spot radii , e.g radius<-c(0.2, 0.3, 0.4, 0.5, 0.6)
+* min_size        a number from 1 to # of radii which specifies the minimum radius for the spots in first_points.  So for example if min_size is 3, the first_points plotted spots will all have a radius greater or equal to the third value of radius i.e. 0.4 for the list above.
 
 * Spot colors. The target RGB value is specified as:
   - target_R<-0  
