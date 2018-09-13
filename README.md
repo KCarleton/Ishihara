@@ -31,3 +31,4 @@ in the radius or R,G,B arrays.
 
 Here is an example of the output of Ishihara_plot:
 
+![alt tag](https://github.com/KCarleton/Ishihara/Ishihara_example.jpeg) 
