@@ -1,12 +1,12 @@
-# Ishihara_plot
-==========================================================================
+Ishihara_plot
+===============
 R code to print Ishihara patterns for behavioral color vision experiments.
---------------------------------------------------------------------------
+## Introduction
 This code was developed as a target for visual behavioral experiments based on the work of Karen Cheney et al as described in "An Ishihara-style test of animal colour vision" Methods in Ecology and Evolution.  It produces Ishihara patterns where one spot differs from many background spots.  These patterns are then used to test whether fish or other organisms can recognize the unique spot (the target) relative to the background spots.  The target is typically a different hue from the background spots.  The background spots vary in luminance (being both greater and less in luminance from the target) but are similar in hue.  This enables tests of color discrimination while controlling for luminance (letting it vary).  John Endler has written code in MatLab to generate Ishihara patterns.  This version was written in R and is independent of John's Matlab code. Therefore, do not blame him for the foibles found here.
 
 The pattern is made up of circles or spots.  The target spot is unique from the others in hue and is plotted first.  The background spots are randomly selected from a set of specified sizes and colors.  These background spots are divided into two groups: first_points which are selected to be larger and rest_points which can be any size and help fill in the space between the larger first_points.
 
-There are several key variables to set up the patterns:
+## Key variables
 * plotmaxx        set maximum x dimension of the plot
 * plotmaxy        set maximum y dimension of the plot
 * boundary_target set the width of a border around the edge so that the target spot occurs interior to that boundary
