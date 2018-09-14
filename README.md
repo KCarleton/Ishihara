@@ -2,9 +2,9 @@ Ishihara_plot
 ===============
 R code to print Ishihara patterns for behavioral color vision experiments.
 ## Introduction
-This code was developed as a target for visual behavioral experiments based on the work of Karen Cheney et al as described in "An Ishihara-style test of animal colour vision" Methods in Ecology and Evolution.  It produces Ishihara patterns where one spot differs from many background spots.  These patterns are then used to test whether fish or other organisms can recognize the unique spot (the target) relative to the background spots.  The target is typically a different hue from the background spots.  The background spots vary in luminance (being both greater and less in luminance from the target) but are similar in hue.  This enables tests of color discrimination while controlling for luminance (letting it vary).  John Endler has written code in MatLab to generate Ishihara patterns.  This version was written in R and is independent of John's Matlab code. Therefore, do not blame him for the foibles found here.
+This code was developed to produce visual targets for behavioral tests of color vision.  This is based on the work ofCheney et al (2018) "An Ishihara-style test of animal colour vision" Methods in Ecology and Evolution.  This code produces Ishihara patterns where one target spot differs from many background spots.  Multiple target spots can also be used. The Ishihara patterns are then used to test whether fish or other organisms can recognize the unique spot (the target) relative to the background spots.  The target differs in hue, while the background spots vary in luminance (being both greater and less in luminance from the target) but are similar to each other in hue.  This enables tests of color discrimination while controlling for luminance (letting it vary).  Cheney et al (2018) provide MatLab code to generate Ishihara patterns.  This R code was developed as an alternative for folks not having access to Matlab. 
 
-The pattern is made up of circles or spots.  The target spot is unique from the others in hue and is plotted first.  The background spots are randomly selected from a set of specified sizes and colors.  These background spots are divided into two groups: first_points which are selected to be larger and rest_points which can be any size and help fill in the space between the larger first_points.
+The Ishihara pattern is made up of circles or spots.  One or more target spots with unique hues are plotted first.  The background spots are randomly selected from a set of specified sizes and colors.  These background spots are divided into two groups: first_points which are selected to be larger and rest_points which can be any size and help fill in the space between the larger first_points.
 
 ## Key variables
 * plotmaxx        set maximum x dimension of the plot
@@ -21,7 +21,11 @@ The pattern is made up of circles or spots.  The target spot is unique from the 
   - target_R<-0  
   - target_G<-0
   - target_B<-255
-* The background spots are selected at random from a set of colors, where the first color would be R[1], G[1], B[1]
+  If there are more colors listed for target colors, then the code makes more targets, e.g. to make three targets with one red, one green and one blue you could set the following target colors:
+  - target_R<-c(0,0,255)
+  - target_G<-c(0,255,0)
+  - target_B<-c(255,0,0)
+* The background spots are selected at random from a set of colors, where the first color would be R[1], G[1], B[1] etc
   - R<-c(50,75,100,125,150,175,200,225)   
   - G<-c(50,75,100,125,150,175,200,225)   
   - B<-c(50,75,100,125,150,175,200,225)
