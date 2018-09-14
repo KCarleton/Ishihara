@@ -17,6 +17,8 @@ The Ishihara pattern is made up of circles or spots.  One or more target spots w
 * radius          the set of possible spot radii , e.g radius<-c(0.2, 0.3, 0.4, 0.5, 0.6)
 * min_size        a number from 1 to # of radii which specifies the minimum radius for the spots in first_points.  So for example if min_size is 3, the first_points plotted spots will all have a radius greater or equal to the third value of radius i.e. 0.4 for the list above.
 
+* offset_buffer   The circles are drawn with a border. Making the border white makes too much white space.  But having the borders be the same color as the spots can sometimes lead to small overlaps.  This variable builds in a bit more distance between spots to reduce that overlap.
+
 * Target color(s). The target RGB value is specified as:
   - target_R<-0  
   - target_G<-0
