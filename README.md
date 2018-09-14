@@ -17,16 +17,16 @@ The Ishihara pattern is made up of circles or spots.  One or more target spots w
 * radius          the set of possible spot radii , e.g radius<-c(0.2, 0.3, 0.4, 0.5, 0.6)
 * min_size        a number from 1 to # of radii which specifies the minimum radius for the spots in first_points.  So for example if min_size is 3, the first_points plotted spots will all have a radius greater or equal to the third value of radius i.e. 0.4 for the list above.
 
-* Spot colors. The target RGB value is specified as:
+* Target color(s). The target RGB value is specified as:
   - target_R<-0  
   - target_G<-0
   - target_B<-255
   
-  If there are more colors listed for target colors, then the code makes more targets, e.g. to make three targets with one red, one green and one blue you could set the following target colors:
+  If there are more colors listed for target colors, then the code makes more targets, e.g. the following makes three targets with one red, one green and one blue:
   - target_R<-c(0,0,255)
   - target_G<-c(0,255,0)
   - target_B<-c(255,0,0)
-* The background spots are selected at random from a set of colors, where the first color would be R[1], G[1], B[1] etc
+* The background spots are selected at random from a set of colors, where the first color would be R[1], G[1], B[1] etc.  These are ideally all the same distance from the target but differing in luminance.  The set below produces different shades of gray.
   - R<-c(50,75,100,125,150,175,200,225)   
   - G<-c(50,75,100,125,150,175,200,225)   
   - B<-c(50,75,100,125,150,175,200,225)
