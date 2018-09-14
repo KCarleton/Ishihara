@@ -21,6 +21,7 @@ The Ishihara pattern is made up of circles or spots.  One or more target spots w
   - target_R<-0  
   - target_G<-0
   - target_B<-255
+  
   If there are more colors listed for target colors, then the code makes more targets, e.g. to make three targets with one red, one green and one blue you could set the following target colors:
   - target_R<-c(0,0,255)
   - target_G<-c(0,255,0)
